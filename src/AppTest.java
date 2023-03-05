@@ -30,6 +30,10 @@ public class AppTest {
     void testAddActivity()
     {
         System.out.println("======TEST TWO EXECUTED=======");
+        new Scheduler.Activity("Read", Daily,aDateTime);
+        new Scheduler.Activity("meditate",Daily,aDateTime2);
+        new Scheduler.Activity("Sing",Daily,aDateTime);
+
         Assertions.assertEquals( 3 , Scheduler.AllActivities.size());
     }
 
@@ -39,11 +43,14 @@ public class AppTest {
 
     void testViewActivities()
     {
+        Scheduler.Category weekly = new Scheduler.Category("weekly","red");
         System.out.println("======TEST THREE EXECUTED=======");
-        Scheduler.Activity act1 =  new Scheduler.Activity("Read", Daily,aDateTime);
-        Scheduler.Activity act2 = new Scheduler.Activity("meditate",Daily,aDateTime2);
-        Scheduler.Activity act4 =  new Scheduler.Activity("Sing",Daily,aDateTime);
-        Scheduler.DisplayALLActivitiesCategory(Daily);
+        new Scheduler.Activity("Read", weekly,aDateTime);
+        new Scheduler.Activity("meditate",weekly,aDateTime2);
+        new Scheduler.Activity("Sing",weekly,aDateTime);
+        Scheduler.DisplayALLActivitiesCategory(weekly);
+
+        Assertions.assertEquals( 3 , Scheduler.AllActivities.size());
     }
     @AfterEach
     void tearThis(){
