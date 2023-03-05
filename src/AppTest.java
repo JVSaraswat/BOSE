@@ -43,7 +43,7 @@ public class AppTest {
 
     void testViewActivities()
     {
-        Scheduler.Category weekly = new Scheduler.Category("weekly","red");
+        Scheduler.Category weekly = new Scheduler.Category("weekly","blue");
         System.out.println("======TEST THREE EXECUTED=======");
         new Scheduler.Activity("Read", weekly,aDateTime);
         new Scheduler.Activity("meditate",weekly,aDateTime2);
