@@ -46,7 +46,9 @@ public class AppTest {
         Scheduler.Category weekly = new Scheduler.Category("weekly","blue");
         System.out.println("======TEST THREE EXECUTED=======");
         new Scheduler.Activity("Read", weekly,aDateTime);
+        Assertions.assertEquals( 1 , Scheduler.AllActivities.size());
         new Scheduler.Activity("meditate",weekly,aDateTime2);
+        Assertions.assertEquals( 2 , Scheduler.AllActivities.size());
         new Scheduler.Activity("Sing",weekly,aDateTime);
         Scheduler.DisplayALLActivitiesCategory(weekly);
 
