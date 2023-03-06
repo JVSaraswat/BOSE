@@ -31,9 +31,10 @@ public class AppTest {
     {
         System.out.println("======TEST TWO EXECUTED=======");
         new Scheduler.Activity("Read", Daily,aDateTime);
+        Assertions.assertEquals( 1 , Scheduler.AllActivities.size());
         new Scheduler.Activity("meditate",Daily,aDateTime2);
+        Assertions.assertEquals( 2 , Scheduler.AllActivities.size());
         new Scheduler.Activity("Sing",Daily,aDateTime);
-
         Assertions.assertEquals( 3 , Scheduler.AllActivities.size());
     }
 
