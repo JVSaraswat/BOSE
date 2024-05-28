@@ -67,8 +67,15 @@ public class Scheduler
                         if(name.length()==0) System.out.println("The Category name cannot be empty");
                         cat_name=name;
                     }
+                    name="";
+                    String cat_color = null;
                     System.out.println("Enter the Color for this category");
-                    String cat_color = myObj.nextLine().toLowerCase();
+                    while(name.length()==0)
+                    {
+                        name= myObj.nextLine();
+                        if(name.length()==0) System.out.println("The Category Color name cannot be empty");
+                        cat_color=name;
+                    }
                     AllCategories.add(new Category(cat_name, cat_color));
                     System.out.println("Category Created");
                 }
