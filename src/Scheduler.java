@@ -57,10 +57,16 @@ public class Scheduler
             {
                 case "1" ->
                 {
-                    String cat_name="";
+
                     System.out.println("Enter the name for a new category");
-                    while (cat_name.length() != 0)
-                    {cat_name= myObj.nextLine();}
+                    String cat_name="";
+                    String name="";
+                    while(name.length()==0)
+                    {
+                        name= myObj.nextLine();
+                        if(name.length()==0) System.out.println("The Category name cannot be empty");
+                        cat_name=name;
+                    }
                     System.out.println("Enter the Color for this category");
                     String cat_color = myObj.nextLine().toLowerCase();
                     AllCategories.add(new Category(cat_name, cat_color));

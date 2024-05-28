@@ -23,7 +23,7 @@ public class AppTest {
         System.out.println("======TEST ONE EXECUTED=======");
         Scheduler.AllCategories.add(Daily);
         Assertions.assertEquals( 1 , Scheduler.AllCategories.size());
-        Scheduler.AllCategories.add(new Scheduler.Category("Weekly"));
+        Scheduler.AllCategories.add(new Scheduler.Category("weekly"));
         Assertions.assertEquals( 2 , Scheduler.AllCategories.size());
     }
     @Test
